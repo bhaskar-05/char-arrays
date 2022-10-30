@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int len_string(char ch[], int capacity){
+
+    int size=0;
+    int i=0;
+    while (i<capacity) {
+        if (ch[i]='\0') {
+            break;
+        }
+        size++;
+        i++;
+    }
+    return size;
+}
+
+int main() {
+
+    char ch[20];
+    cout << "Enter the characater: ";
+    cin>> ch;
+
+    int ans=len_string(ch,6);
+    cout << "The size of the given arrays is: " << ans;
+
+
+
+}
