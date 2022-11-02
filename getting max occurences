@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+char getMax(string s) {
+    //initialisation of and array representing all the alphabets as 0
+    int arr[26] ={0};
+
+
+    for (int i=0; i<s.length(); i++) {
+
+        int number;
+        number= s[i]-'a';
+       
+        arr[number]++;   //increasing the values of the respective index corresponding to the alphabets
+    }
+    int maxi=-1, ans=0;
+    for (int i=0; i<26; i++) {
+        
+        if (arr[i]>maxi) {
+            maxi=arr[i];
+            ans=i;
+        }
+    }
+    return ans+'a';
+    
+    
+}
+
+int main() {
+
+    string s="bhaskar";
+   
+    cout << getMax(s);
+}
